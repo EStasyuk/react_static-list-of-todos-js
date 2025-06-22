@@ -7,8 +7,12 @@ export const TodoInfo = ({ todo }) => {
     >
       <h2 className="TodoInfo__title">{todo.title}</h2>
 
-      <a className="UserInfo" href="mailto:Sincere@april.biz">
-        Leanne Graham
+      <a
+        className="UserInfo"
+        href={`mailto:${todo.user.email}`}
+        data-cy="UserInfo"
+      >
+        {todo.user.name}
       </a>
     </article>
   );
